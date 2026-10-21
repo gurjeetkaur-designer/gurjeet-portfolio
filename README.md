@@ -13,7 +13,17 @@ npm run build     # production build in dist/
 npm run preview   # serve the production build locally
 ```
 
-The `dist/` folder is a static site, so you can deploy it to Netlify, Vercel, GitHub Pages or any static host.
+The `dist/` folder is a static site that any static host can serve.
+
+## Deployment (GitHub Pages)
+
+Every push to `master` builds the site and publishes it through `.github/workflows/deploy.yml` to:
+
+**https://rohitthakurattri.github.io/gurjeet-portfolio/**
+
+One-time setup: on GitHub, go to **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**.
+
+Production builds use the base path `/gurjeet-portfolio/` (see `vite.config.js`). If you rename the repo or move to a custom domain, update that path.
 
 ## Project structure
 
