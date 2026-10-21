@@ -18,7 +18,7 @@ The `dist/` folder is a static site that any static host can serve.
 
 ## Deployment (GitHub Pages)
 
-Every push to `master` builds the site and publishes it through `.github/workflows/deploy.yml` to:
+Every push to `main` builds the site and publishes it through `.github/workflows/deploy.yml` to:
 
 **https://rohitthakurattri.github.io/gurjeet-portfolio/**
 
