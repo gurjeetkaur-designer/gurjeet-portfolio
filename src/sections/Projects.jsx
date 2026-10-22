@@ -43,7 +43,7 @@ export default function Projects() {
           id="projects-title"
           eyebrow="Portfolio"
           title="Selected work"
-          intro="Brand campaigns, social media creatives, wedding stationery, logos and illustrations. Tap any piece to view it full size."
+          intro="Social media creatives, brand campaigns, motion graphics, reels, video invitations, wedding print, illustrations and logos. Tap any piece to view it full size or play it."
         />
 
         <div className="filters" role="group" aria-label="Filter projects">

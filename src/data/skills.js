@@ -1,48 +1,47 @@
-import { Brush, Gem, Heart, LayoutGrid, Palette, PenTool, Printer, Type } from 'lucide-react';
+import { Brush, Clapperboard, LayoutGrid, MailOpen, PenTool, Printer, Sparkles, WandSparkles } from 'lucide-react';
 
 // Any icon from https://lucide.dev/icons can be used — import it above.
 export const skills = [
   {
-    icon: PenTool,
-    title: 'Logo & Identity',
-    text: 'Logos, monograms and wedding crests with a distinct personality.',
-  },
-  {
-    icon: Gem,
-    title: 'Campaign Creatives',
-    text: 'Festive and product campaigns for jewellery and lifestyle brands.',
-  },
-  {
     icon: LayoutGrid,
-    title: 'Social Media Design',
-    text: 'Scroll-stopping posts and stories for festivals and special days.',
+    title: 'Social Media Creatives',
+    text: 'Scroll-stopping posts, stories and festive campaigns for brands.',
   },
   {
-    icon: Heart,
-    title: 'Wedding Stationery',
-    text: 'Entry boards, wedding contracts, badges, menus and welcome signage.',
+    icon: Clapperboard,
+    title: 'Reels & Short-form Video',
+    text: 'Engaging reels and short videos edited for Instagram and beyond.',
+  },
+  {
+    icon: Sparkles,
+    title: 'Motion Graphics',
+    text: 'Animated posts, titles and promos brought to life in After Effects.',
+  },
+  {
+    icon: MailOpen,
+    title: 'Wedding & Event Invitations',
+    text: '2D and 3D invitations for weddings, parties and special events.',
   },
   {
     icon: Brush,
-    title: 'Illustration',
-    text: 'Fashion illustrations and custom couple caricatures from photos.',
-  },
-  {
-    icon: Type,
-    title: 'Typography',
-    text: 'Expressive English and Devanagari lettering and type pairing.',
+    title: 'Caricatures & Illustrations',
+    text: 'Custom couple caricatures and fashion illustrations from photos.',
   },
   {
     icon: Printer,
-    title: 'Print-ready Artwork',
-    text: 'Large-format boards and badges prepared for clean, accurate print.',
+    title: 'Wedding Boards & Badges',
+    text: 'Print-ready entry boards, welcome signage and badges.',
   },
   {
-    icon: Palette,
-    title: 'Colour & Layout',
-    text: 'Rich festive palettes and balanced compositions that feel premium.',
+    icon: WandSparkles,
+    title: 'AI-assisted Creative Design',
+    text: 'Using AI tools to explore ideas faster and push concepts further.',
+  },
+  {
+    icon: PenTool,
+    title: 'Logos & Branding',
+    text: 'Logos, monograms and brand identities with a distinct personality.',
   },
 ];
 
-// Software and tools — confirm and edit this list.
-export const tools = ['Adobe Illustrator', 'Adobe Photoshop'];
+export const tools = ['Adobe Photoshop', 'Adobe Illustrator', 'Adobe After Effects', 'AI tools'];

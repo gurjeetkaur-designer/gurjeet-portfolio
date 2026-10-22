@@ -11,7 +11,7 @@ export const profile = {
 
   tagline: 'Designs that celebrate every occasion.',
   intro:
-    'I create festive campaigns, social media creatives, wedding stationery, logos and hand-crafted fashion illustrations — bringing colour, culture and a little sparkle to every brand and celebration I design for.',
+    'I create social media creatives, reels and motion graphics, 2D & 3D wedding invitations, logos and hand-crafted illustrations — bringing colour, culture and a little sparkle to every brand and celebration I design for.',
 
   // Profile photo. To add one: put the image in src/assets/ (e.g. profile.webp),
   // then:  import photo from '../assets/profile.webp';  and set  photo: photo
@@ -23,20 +23,15 @@ export const profile = {
     paragraphs: [
       'I’m a graphic designer who loves turning moments into visuals — from Diwali and Baisakhi campaigns for a fine-jewellery brand to playful bridal-entry boards, wedding contracts and custom monograms for couples.',
       'My work moves between polished brand creatives and warm, hand-drawn illustration. I enjoy working with both English and Devanagari typography, rich festive palettes and thoughtful layouts that feel premium on screen and in print.',
-      // Placeholder — replace with your own background, experience and goals.
-      '[Add a few lines about your background, years of experience, what inspires you and the kind of projects or roles you’re looking for next.]',
+      'I spent over three years as a graphic designer at Uimatic in Mohali, creating social media campaigns, reels, motion graphics and invitations for a range of clients. Today I work across Adobe Photoshop, Illustrator and After Effects, and use AI tools to explore ideas faster without losing the handcrafted touch.',
     ],
     interests: ['Festive & cultural design', 'Fashion illustration', 'Typography', 'Wedding stationery'],
   },
 
   contact: {
-    email: '', // e.g. 'hello@example.com'
-    phone: '', // optional
-    location: '', // e.g. 'Punjab, India'
-    // Optional Formspree-style endpoint (https://formspree.io/f/xxxx). When set,
-    // the contact form posts here. Otherwise it falls back to opening the
-    // visitor's email app (if `email` is set).
-    formEndpoint: '',
+    email: 'gurjeetpawar82@gmail.com',
+    phone: '+91 79867 12754',
+    location: 'Punjab, India',
   },
 
   // Supported icons: instagram, linkedin, behance, dribbble, github, website

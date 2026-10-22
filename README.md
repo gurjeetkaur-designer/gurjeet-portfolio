@@ -43,7 +43,7 @@ src/
   styles/
     base.css            design tokens (colours, fonts), shared UI, nav, footer
     sections.css        section styles and responsive breakpoints
-  assets/work/          optimised portfolio images (brand, social, print, logos, illustration) — 137 pieces
+  assets/work/          optimised portfolio media (social, brand, motion, reels, invitations, print, illustration, logos) — 222 pieces
 ```
 
 ## Editing content
@@ -51,11 +51,6 @@ src/
 Everything you'd normally change lives in `src/data/`. Text in `[square brackets]` is placeholder content. Replace it with real details, or delete the entry.
 
 - **Contact details and social links:** fill in `contact` and `socials` in `profile.js`. Empty values are hidden, so nothing invented is shown.
-- **Contact form:** the form validates input on the page. To actually deliver messages, either
-  - set `contact.formEndpoint` to a [Formspree](https://formspree.io) (or similar) endpoint, or
-  - set `contact.email`, and the form will open the visitor's email app with the message pre-filled.
-
-  Until one of these is set, submitting shows a "not connected yet" message.
 - **Colours and fonts:** edit the variables at the top of `src/styles/base.css`.
 
 ## Replacing images
@@ -73,14 +68,16 @@ The photo then replaces the "GK" monogram in the hero, the About section and the
    {
      title: 'My Campaign',
      description: 'One or two lines about the piece.',
-     category: 'brand',                 // brand | social | print | logos | illustration
+     category: 'brand',                 // social | brand | motion | reels | invitations | print | illustration | logos
      image: work('brand/my-campaign.webp'),
      tags: ['Jewellery', 'Story'],
      featured: true,                    // optional: show in the "Featured" tab
      link: 'https://behance.net/…',     // optional: otherwise the card opens a full-size view
    },
    ```
-If a path is mistyped, the dev server shows a clear "Image not found" error instead of a broken image.
+For a video, save the `.mp4` and a poster frame with the same name (`motion/holi.mp4` + `motion/holi.webp`) and use `...clip('motion/holi')` instead of `image`. For a multi-slide post, use `...carousel(['reels/carousel/1', 'reels/carousel/2'])`.
+
+If a path is mistyped, the dev server shows a clear "File not found" error instead of a broken image.
 
 The hero collage and About image are set by `heroImages` and `aboutImage` at the bottom of `projects.js`.
 
@@ -91,9 +88,17 @@ Original exports (often 5000px+ PNGs) are much too large for the web. Resize the
 convert "input.png" -resize '1400x1400>' -strip -quality 78 output.webp
 ```
 
-All 137 unique pieces from the original 263 MB folder were reduced to about 12 MB this way. (8 files that were byte-identical "(1)" copies, and one WhatsApp re-export of an existing poster, were left out.)
+Images were resized to 1600px on the long edge and saved as WebP. Videos were scaled to 540×960 H.264 with a poster frame taken from the video, which brought the 1.5 GB source folder down to about 220 MB:
+
+```bash
+ffmpeg -i input.mp4 -vf scale=540:-2 -c:v libx264 -preset slow -crf 28 -maxrate 1500k -bufsize 3000k \
+  -pix_fmt yuv420p -c:a aac -b:a 96k -movflags +faststart output.mp4
+ffmpeg -ss 6 -i output.mp4 -frames:v 1 -c:v libwebp -quality 80 output.webp
+```
+
+Byte-identical "(1)" copies and two badges that were visual duplicates were left out.
 
 ## Accessibility and motion
 
-- Semantic landmarks, a skip link, labelled form fields with inline errors, and keyboard-accessible menu, filters and lightbox (Esc to close, ← → to browse).
+- Semantic landmarks, a skip link, and keyboard-accessible menu, filters and lightbox (Esc to close, ← → to browse).
 - Animations respect the operating system's "reduce motion" setting, through Framer Motion's `MotionConfig` and a CSS media query.

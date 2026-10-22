@@ -12,10 +12,10 @@ function Timeline({ icon: Icon, title, items }) {
       <ol className="timeline">
         {items.map((entry, i) => (
           <Reveal as="li" key={`${entry.title}-${i}`} className="timeline__item" delay={i * 0.08}>
-            <span className="timeline__period">{entry.period}</span>
+            {entry.period && <span className="timeline__period">{entry.period}</span>}
             <h4>{entry.title}</h4>
             <p className="timeline__org">{entry.org}</p>
-            <p>{entry.text}</p>
+            {entry.text && <p>{entry.text}</p>}
           </Reveal>
         ))}
       </ol>

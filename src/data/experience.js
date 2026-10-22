@@ -1,38 +1,21 @@
-// Timeline content. Text in [square brackets] is placeholder — replace it with
-// your real details, or delete entries you don't need.
+// Timeline content. `period` is optional — leave it out to hide the date.
 
 export const experience = [
   {
-    period: '[Start year] — Present',
+    period: 'Nov 2022 — Sep 2026',
     title: 'Graphic Designer',
-    org: '[Company or Freelance]',
-    text: 'Designing festive and product campaign creatives for a fine-jewellery brand, plus social media graphics for multiple brands.',
-  },
-  {
-    period: '[Start year] — [End year]',
-    title: 'Wedding & Event Stationery Designer',
-    org: '[Studio or Freelance]',
-    text: 'Bridal entry boards, wedding contracts, badges, welcome boards, menus and monograms tailored to each couple.',
-  },
-  {
-    period: '[Year]',
-    title: 'Illustration Commissions',
-    org: '[Freelance]',
-    text: 'Custom fashion illustrations and couple caricatures created from client photographs.',
+    org: 'Uimatic, Mohali',
+    text: 'Designed social media creatives, reels and short-form videos, motion graphics, festive campaigns, logos and branding, plus 2D & 3D wedding and event invitations for clients.',
   },
 ];
 
 export const education = [
   {
-    period: '[Year] — [Year]',
-    title: '[Degree / Diploma in Design]',
-    org: '[Institution name]',
-    text: '[Key subjects, projects or achievements.]',
+    title: 'Master of Arts (M.A.)',
+    org: 'Punjabi University, Patiala',
   },
   {
-    period: '[Year]',
-    title: '[Certification or Achievement]',
-    org: '[Issuing organisation]',
-    text: '[One line about what you learned or achieved.]',
+    title: 'Bachelor of Arts (B.A.)',
+    org: 'Khalsa College, Patiala',
   },
 ];
