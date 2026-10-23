@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 function Media({ item }) {
   if (item.video) {
     // Keyed so moving to another video restarts playback instead of reusing the element.
-    return <video key={item.video} src={item.video} poster={item.image} controls autoPlay playsInline />;
+    return <video key={item.video} src={item.video} poster={item.image} controls autoPlay playsInline controlsList="nodownload noremoteplayback" disablePictureInPicture />;
   }
   if (item.gallery) {
     return (

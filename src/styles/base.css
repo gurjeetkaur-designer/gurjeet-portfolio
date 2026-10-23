@@ -579,3 +579,31 @@ button {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* ==========================================================================
+   Artwork protection (see src/protect.js)
+   ========================================================================== */
+img,
+video {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-touch-callout: none; /* iOS long-press "Save Image" */
+}
+
+img,
+video {
+  transition: filter 0.15s ease;
+}
+
+.is-shielded img,
+.is-shielded video,
+.is-inspecting img,
+.is-inspecting video {
+  filter: blur(28px) saturate(0.6);
+}
+
+@media print {
+  body {
+    display: none !important;
+  }
+}
