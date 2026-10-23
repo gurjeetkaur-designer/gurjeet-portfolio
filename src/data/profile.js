@@ -30,7 +30,7 @@ export const profile = {
 
   contact: {
     email: 'gurjeetpawar82@gmail.com',
-    phone: '+91 79867 12754',
+    phone: '',
     location: 'Punjab, India',
   },
 
