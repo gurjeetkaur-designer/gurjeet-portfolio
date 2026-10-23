@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "encrypt": "staticrypt dist/index.html -d dist --short --remember 30 --template-title \"Private Portfolio\" --template-instructions \"This portfolio is private. Enter the password to view it.\""
   },
   "dependencies": {
     "framer-motion": "^12.43.0",
@@ -17,6 +18,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^5.2.0",
     "sharp": "^0.35.5",
+    "staticrypt": "^3.5.4",
     "vite": "^7.3.7"
   }
 }

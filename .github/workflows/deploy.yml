@@ -25,6 +25,17 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      # Encrypt the page with the STATICRYPT_PASSWORD repository secret. Fails the
+      # build if the secret is missing so an unprotected site is never published.
+      - name: Password-protect the site
+        env:
+          STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}
+        run: |
+          if [ -z "$STATICRYPT_PASSWORD" ]; then
+            echo "::error::Add a STATICRYPT_PASSWORD secret under Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+          npm run encrypt
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

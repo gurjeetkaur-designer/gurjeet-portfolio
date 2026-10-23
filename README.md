@@ -24,6 +24,12 @@ Every push to `main` builds the site and publishes it through `.github/workflows
 
 One-time setup: on GitHub, go to **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**.
 
+### Password
+
+The deployed page is encrypted with [StatiCrypt](https://github.com/robinmoisson/staticrypt), so visitors have to enter a password before the site shows. The password comes from the `STATICRYPT_PASSWORD` repository secret (**Settings → Secrets and variables → Actions**). To change it, update the secret and re-run the deploy workflow. `.staticrypt.json` holds the salt, which isn't secret. Keep it so "Remember me" keeps working across deploys.
+
+This protects the page itself, but the image and video files in `assets/` can still be opened by anyone who has their direct URL.
+
 Production builds use the base path `/gurjeet-portfolio/` (see `vite.config.js`). If you rename the repo or move to a custom domain, update that path.
 
 ## Project structure
